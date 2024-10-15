@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MusicBank Embed</title>
+    <title id="page-title">MusicBank Embed</title> <!-- Added id to title -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Archivo%20Black:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -39,6 +39,7 @@
         document.getElementById('audio-source').src = audioLink;
         document.getElementById('song-name').innerHTML = audioName;
         document.getElementById('song-author').innerHTML = audioAuthor;
+        document.title = audioName; // Set the title to the current song name
         document.getElementById('audio').load();
     
         let progress = document.getElementById("progress");
@@ -51,9 +52,9 @@
         }
     
         if(song.play()){
-            setInterval(()=>{
+            setInterval(() => {
                 progress.value = song.currentTime;
-            },200);
+            }, 200);
         }
 
         song.onended = function() {
@@ -101,6 +102,7 @@
                 document.getElementById('audio-source').src = songDetails.Link;
                 document.getElementById('song-name').innerHTML = songDetails.Name;
                 document.getElementById('song-author').innerHTML = songDetails.Author;
+                document.title = songDetails.Name; // Update title to the new song name
                 document.getElementById('audio').load();
                 song.play(); // Automatically play the new song
 
