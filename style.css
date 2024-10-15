@@ -15,7 +15,7 @@ body{
     padding: 25px 35px;
     text-align: center;
     justify-content: center;
-    display: flex;
+    display: wrap;
 }
 nav{
     display: flex;
