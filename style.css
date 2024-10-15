@@ -8,6 +8,10 @@ body{
     width: 100%;
     height: 100vh;
     background: linear-gradient(90deg,#000da0,#58176b);
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 
 }
 .music-player{
@@ -15,7 +19,9 @@ body{
     padding: 25px 35px;
     text-align: center;
     justify-content: center;
-    display: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 nav{
     display: flex;
