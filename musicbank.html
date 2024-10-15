@@ -86,7 +86,7 @@
         // Shuffle song functionality
         async function shuffleSong() {
             try {
-                const response = await fetch('https://musicbank.vercel.app/songlist.json');
+                const response = await fetch('https://musicbank.vercel.app/list.json');
                 const songList = await response.json();
                 const randomIndex = Math.floor(Math.random() * songList.length);
                 const randomSongPage = songList[randomIndex]; // Assuming this contains the song page name
